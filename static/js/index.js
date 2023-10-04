@@ -22,6 +22,12 @@ window.addEventListener('load', function () {
       document.body.style.backgroundColor = 'white';
       document.body.style.color = 'black';
     }
+    let themeLabel = this.document.getElementById('themeLabel');
+    if (themeLabel.innerHTML === 'Dark') {
+      themeLabel.innerHTML = 'Light';
+    } else {
+      themeLabel.innerHTML = 'Dark';
+    }
   };
 
   document
