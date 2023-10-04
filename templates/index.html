@@ -17,6 +17,7 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+    <script src="../static/js/index.js"></script>
   </head>
   <body>
     <header>
@@ -37,53 +38,48 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./Catalog.html">Catalog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Technology</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Sports</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Finance</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
+                <a class="nav-link" aria-current="page" href="#" id="home"
+                  >Home</a
                 >
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
-                </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                <a class="nav-link" href="./about.html" id="about">About</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./Catalog.html" id="catalog"
+                  >Catalog</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./references.html" id="references"
+                  >References</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="technology">Technology</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#sports" id="sports">Sports</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#finance" id="finance">Finance</a>
+              </li>
+              
             </ul>
             <form class="d-flex" role="search">
               <input
                 class="form-control me-2"
-                type="search"
+                type="text"
                 placeholder="Search"
-                aria-label="Search"
               />
+              <button
+                class="btn btn-outline-warning"
+                type="button"
+                id="searchBtn"
+              >
+                Search
+              </button>
+
               <div class="form-check form-switch">
                 <input
                   class="form-check-input"
@@ -92,29 +88,9 @@
                   id="flexSwitchCheckChecked"
                   checked
                 />
-                <label
-                  class="form-check-label"
-                  for="flexSwitchCheckChecked"
-                  onclick="changetheme()"
-                  >Dark Mode</label
-                >
-                <script>
-                  let changetheme = () => {
-                    if (
-                      document.getElementById('flexSwitchCheckChecked').checked
-                    ) {
-                      document.body.style.backgroundColor = 'black';
-                      document.body.style.color = 'white';
-                    } else {
-                      document.body.style.backgroundColor = 'white';
-                      document.body.style.color = 'black';
-                    }
-                  };
-
-                  document
-                    .getElementById('flexSwitchCheckChecked')
-                    .addEventListener('change', changetheme);
-                </script>
+                
+               <input type="checkbox" checked data-toggle="toggle">
+                
               </div>
             </form>
           </div>
