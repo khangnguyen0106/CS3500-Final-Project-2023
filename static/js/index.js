@@ -105,13 +105,18 @@ window.addEventListener('load', function () {
                 <a class="nav-link" href="./about.html" id="about">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./Catalog.html" id="catalog"
+                <a class="nav-link" href="./catalog.html" id="catalog"
                   >Catalog</a
                 >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./references.html" id="references"
                   >References</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact.html" id="contact"
+                  >Contact</a
                 >
               </li>
             </ul>
