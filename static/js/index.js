@@ -48,7 +48,7 @@ window.addEventListener('load', function () {
   let searchquery = '';
 
   switch (
-    true // switching on 'true' to allow each case to evaluate a condition
+  true // switching on 'true' to allow each case to evaluate a condition
   ) {
     case path.includes('technology'):
       getData('technology');
@@ -69,7 +69,7 @@ window.addEventListener('load', function () {
   let nav = document.getElementById(`navBarJS`);
   let nvbar = `<nav class="navbar navbar-expand-lg bg-body-tertiary" id="top-nav">
         <div class="container-fluid">
-          <a class="navbar-brand" href="./index.html">World News</a>
+          <a class="navbar-brand" href="./index.html"><h3>World News</h3></a>
           <button
             class="navbar-toggler"
             type="button"
@@ -93,6 +93,15 @@ window.addEventListener('load', function () {
                 >
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="./technology.html" id="technology">Technology</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./sports.html" id="sports">Sports</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./finance.html" id="finance">Finance</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="./about.html" id="about">About</a>
               </li>
               <li class="nav-item">
@@ -104,15 +113,6 @@ window.addEventListener('load', function () {
                 <a class="nav-link" href="./references.html" id="references"
                   >References</a
                 >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./technology.html" id="technology">Technology</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./sports.html" id="sports">Sports</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./finance.html" id="finance">Finance</a>
               </li>
             </ul>
             <form class="d-flex" role="search">
@@ -199,7 +199,7 @@ window.addEventListener('load', function () {
       template += `</div>`;
       try {
         document.getElementById('newsID').innerHTML = template;
-      } catch (warning) {}
+      } catch (warning) { }
     } catch (error) {
       window.warning('Error fetching the news data:', error);
     }
