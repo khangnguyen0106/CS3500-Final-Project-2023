@@ -176,7 +176,7 @@ window.addEventListener('load', function () {
   // Get API data
   async function getData(cat) {
     try {
-      let categoryAPI = `https://newsapi.org/v2/top-headlines?country=us&category=${cat}&pageSize=${pgSize}&page=${pg}&apiKey=19fd2331c7c643c7b91600722cbd75a2`;
+      let categoryAPI = `https://newsapi.org/v2/top-headlines?country=us&category=${cat}&pageSize=${pgSize}&page=${pg}&apiKey=646ad6bb19824999a542874317a5b4d9`;
       if (searchBool == true) {
         categoryAPI = searchquery;
       }
