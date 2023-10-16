@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>World News| About</title>
-  <link rel="stylesheet" href="../static/css/main.css" />
-  <!-- Need to use bootstrap -->
+  <title>World News| About </title>
+  <!-- Link to Bootstrap's CSS first then main.css -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     href="/static/css/main.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
     crossorigin="anonymous" />
+  <!-- Link to Bootstrap's JS and then main.js -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
     crossorigin="anonymous"></script>
@@ -20,41 +20,58 @@
   <header>
     <div id="navBarJS"></div>
   </header>
-  <div class="container">
+  <div class="container-fluid">
+    <br />
+
+    <p class="text-center fs-1 fw-semibold">About</p>
+
     <div class=”row”>
-      <h1>Welcome to World News</h1>
-      <p>
-        Welcome to World News, your one-stop destination for staying informed
+      <p class="text-start fs-3">Welcome to World News</p>
+      <p class="fs-6">
+        Our website, World News, is a one-stop destination for staying informed
         about the latest developments from around the world. We utilize NewsAPI to
         provide you with up-to-date news articles on a wide range of topics.
         Whether you're interested in technology trends, sports highlights or any
         other subject, our website is designed to bring you the most relevant news
-        at your fingertips. Our user-friendly search bar allows you to easily find
+        at your fingertips. Feel free to utilize the search bar allows you to easily find
         articles of interest, and with a simple click, you can access a concise
         summary of each news story along with a direct link to the full article.
         Stay connected and well-informed with the world's most pressing news by
         exploring our website today.</p>
     </div>
-    <div class="row"></div>
-    <h1>Meet Team 7</h1>
-    <div class=”col-xs-6 col-sm-4”>
-      <img src="/images/Khang.jpg" class="img-thumbnail" alt="Khang's Profile Picture"
-        style="width: 500px; height: 600px" />
-      <h3>Khang Nguyen - Developer</h3>
-      <p>
-        My name is Khang, I'm a Sophomore in Computer Science at WMU. Some fun
-        fact about me is that beside goign to school, I coach Volleyball for
-        Hackett Catholic Prep High School, work for the CAE Department at the
-        College of Engineering and Applied Science, and is an e-board member of
-        WMU Men's Volleyball Club Team</p>
+
+    <br />
+
+    <div class="row">
+      <p class="text-start fs-3">Meet Team 7<p>
     </div>
-    <div class=”col-xs-6 col-sm-4”>
-      <img src="/images/Phi.JPG" class="img-thumbnail" alt="Phi's Profile Picture"
-        style="width: 500px; height: 600px" />
-      <h3>Phi Duong - Developer</h3>
-      <p>An introduction paragraph for Phi</p>
+
+    <div class="row">
+      <div class="col-6">
+        <img src="/images/Khang.jpg" class="rounded border border-black mx-auto d-block" alt="Khang's Profile Picture"
+          style="width: 300px; height: 400px" />
+      </div>
+      <div class="col-6">
+        <img src="/images/Phi.JPG" class="rounded border border-black mx-auto d-block" alt="Phi's Profile Picture"
+          style="width: 275px; height: 400px" />
+      </div>
     </div>
-  </div>
+    <div class="row">
+      <div class="col-6">
+        <p class="text-center fw-medium fs-4 lh-sm">Khang Nguyen - Developer</p>
+        <p class="text-center fs-6 lh-base">
+          My name is Khang, I'm a second-year international student in Computer Science at WMU. Some fun
+          fact about me is that beside going to school, I coach Volleyball for
+          Hackett Catholic Prep High School, work for the CAE Department as a System Administrator at the
+          College of Engineering and Applied Science, and is an e-board member of
+          WMU Men's Volleyball Club Team.</p>
+      </div>
+      <div class="col-6">
+        <p class="text-center fw-medium fs-4 lh-sm">Phi Duong - Developer</p>
+        <p class="text-center fs-6 lh-base">My name is Phi, I'm a Computer Science Major at WMU. I like fashion, photography, and
+          good food.</p>
+      </div>
+    </div>
 
   </div>
 </body>
