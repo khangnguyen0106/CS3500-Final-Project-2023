@@ -1,1 +1,24 @@
 /* This stylesheet is used to overide some Bootstrap's CSS to suit our website more */
+body{
+    font-family: 'Playfair Display', serif;
+}
+.nav-item{
+    font-size: 19px;
+}
+.contact-name {
+    font-size: 25px;
+}
+.navbar-brand{
+    text-shadow: 1px 1px;
+    font-weight: bold;
+}
+.bio-paragraph{
+    font-size: 17px;
+}
+.card-text{
+    font-size: 17px;
+}
+
+.contact-data{
+    font-size: 17px;
+}
