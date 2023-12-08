@@ -12,5 +12,5 @@ Project Info:
 - Amount of css files: 1
 - Amount of js files: 1
 Project work distribution: 
-- Khang: responsible for about.html, catalog.html, references.html, main.css, debugging the whole website
-- Phi: index.html, sports.html, technology.html, finance.html, main.js
+- Khang: responsible for about.html, catalog.html, references.html, debugging 
+- Phi: responsible for index.html, sports.html, technology.html, finance.html, index.js, main.css, debugging

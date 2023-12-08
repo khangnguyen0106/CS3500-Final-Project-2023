@@ -42,13 +42,13 @@ window.addEventListener('load', function () {
   // Setup redirection
   let path = window.location.pathname;
   // API data setup
-  const pgSize = '8';
+  const pgSize = '12';
   const pg = '1';
   let searchBool = false;
   let searchquery = '';
 
   switch (
-  true // switching on 'true' to allow each case to evaluate a condition
+    true // switching on 'true' to allow each case to evaluate a condition
   ) {
     case path.includes('technology'):
       getData('technology');
@@ -69,7 +69,9 @@ window.addEventListener('load', function () {
   let nav = document.getElementById(`navBarJS`);
   let nvbar = `<nav class="navbar navbar-expand-lg bg-body-tertiary" id="top-nav">
         <div class="container-fluid">
-          <a class="navbar-brand" href="./index.html"><h3>World News</h3></a>
+          <a class="navbar-brand" href="./index.html">
+           <img src= "../images/logo.png" alt="Website Logo" width= "100px" height= "100px"/>
+           </a>
           <button
             class="navbar-toggler"
             type="button"
@@ -187,24 +189,29 @@ window.addEventListener('load', function () {
       let template = ` <div class="row">`;
       jsonData.articles.map((d) => {
         if (d.urlToImage !== null) {
-          template += `<div class='col-md-4'>
-          <div class="card" style="width: 90% ;margin: 2px 0 2px 0;" }}>      
-        <img src=${d.urlToImage} class="card-img-top"  />
-        <div class="card-body">
-          <h5 class="card-title">${d.title ? d.title.slice(0, 45) : ''}...</h5>
-          <p class="card-text">
-             ${d.description ? d.description.slice(0, 88) : ''}..
-          </p>
-          <a href=${d.url} target="#" class="btn btn-primary">See Page</a>
+          template += `
+      <div class='col-md-4'>
+        <div class="card news-card">
+          <img src="${d.urlToImage}" class="card-img-top news-card-img" />
+          <div class="card-body">
+            <h5 class="card-title">${
+              d.title ? d.title.slice(0, 45) : ''
+            }...</h5>
+            <p class="card-text">${
+              d.description ? d.description.slice(0, 88) : ''
+            }..</p>
+            <a href="${
+              d.url
+            }" target="_blank" class="btn btn-primary">See Page</a>
+          </div>
         </div>
-      </div>
       </div>`;
         }
       });
       template += `</div>`;
       try {
         document.getElementById('newsID').innerHTML = template;
-      } catch (warning) { }
+      } catch (warning) {}
     } catch (error) {
       window.warning('Error fetching the news data:', error);
     }
