@@ -1,24 +1,91 @@
-/* This stylesheet is used to overide some Bootstrap's CSS to suit our website more */
-body{
+/*This stylesheet's purpose is to make CSS more responsive and adaptable to different screen resolutions, especially for higher resolution screen*/
+body {
     font-family: 'Playfair Display', serif;
 }
-.nav-item{
-    font-size: 19px;
-}
-.contact-name {
-    font-size: 25px;
-}
-.navbar-brand{
-    text-shadow: 1px 1px;
-    font-weight: bold;
-}
-.bio-paragraph{
-    font-size: 17px;
-}
-.card-text{
-    font-size: 17px;
+
+.nav-item {
+    font-size: 1.1875rem; 
 }
 
-.contact-data{
-    font-size: 17px;
+.contact-name {
+    font-size: 1.5625rem; 
+}
+
+.navbar-brand {
+    text-shadow: 1px 1px;
+    font-weight: bold;
+    font-size: 1.125rem; 
+}
+
+.bio-paragraph,
+.card-text,
+.contact-data {
+    font-size: 1.0625rem;
+}
+
+/* Responsive News Card Styles */
+.news-card {
+    margin: 2px 0;
+    min-height: 350px; 
+    width: 90%; 
+}
+
+.news-card-img {
+    height: 200px; 
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-title, .card-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Media Queries for larger screens */
+@media screen and (min-width: 1024px) {
+    .nav-item {
+        font-size: 1.25rem; /* Slightly larger for readability on large screens */
+    }
+
+    .contact-name {
+        font-size: 1.75rem; /* Adjusting for larger screens */
+    }
+
+    .navbar-brand {
+        font-size: 1.25rem; /* Slightly larger for larger screens */
+    }
+
+    .bio-paragraph,
+    .card-text,
+    .contact-data {
+        font-size: 1.125rem; /* Adjusting for larger screens */
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .news-card {
+        min-height: 400px; /* Adjust minimum height for larger screens */
+        width: 85%; /* Adjust width for larger screens */
+    }
+
+    .news-card-img {
+        height: 250px; /* Adjust height for larger screens */
+    }
+}
+
+/* Media Queries for smaller screens */
+@media screen and (max-width: 768px) {
+    .news-card {
+        min-height: 300px; /* Adjust minimum height for smaller screens */
+        width: 95%; /* Adjust width for smaller screens */
+    }
+
+    .news-card-img {
+        height: 150px; /* Adjust height for smaller screens */
+    }
+
+    .card-title, .card-text {
+        white-space: normal; /* Allow text wrapping on smaller screens */
+    }
 }
