@@ -69,7 +69,7 @@ window.addEventListener('load', function () {
   let nav = document.getElementById(`navBarJS`);
   let nvbar = `<nav class="navbar navbar-expand-lg bg-body-tertiary" id="top-nav">
         <div class="container-fluid">
-          <a class="navbar-brand" href="./index.html">
+          <a class="navbar-brand" href="home.php">
            <img src= "../images/logo.png" alt="Website Logo" width= "100px" height= "100px"/>
            </a>
           <button
@@ -89,35 +89,35 @@ window.addEventListener('load', function () {
                 <a
                   class="nav-link"
                   aria-current="page"
-                  href="./index.html"
+                  href="home.php"
                   id="home"
                   >Home</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./technology.html" id="technology">Technology</a>
+                <a class="nav-link" href="technology.html" id="technology">Technology</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./sports.html" id="sports">Sports</a>
+                <a class="nav-link" href="sports.html" id="sports">Sports</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./finance.html" id="finance">Finance</a>
+                <a class="nav-link" href="finance.html" id="finance">Finance</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./about.html" id="about">About</a>
+                <a class="nav-link" href="about.html" id="about">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./catalog.html" id="catalog"
+                <a class="nav-link" href="catalog.html" id="catalog"
                   >Catalog</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./references.html" id="references"
+                <a class="nav-link" href="references.html" id="references"
                   >References</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./contact.html" id="contact"
+                <a class="nav-link" href="contact.html" id="contact"
                   >Contact</a
                 >
               </li>
@@ -137,7 +137,34 @@ window.addEventListener('load', function () {
               >
                 Search
               </button>
-
+              <button
+                class="btn btn-outline-primary"
+                type="button"
+                id="logInBtn"
+                style="margin-right: 20px"
+                onclick="window.location.href='login.php';"
+              >
+                Log In
+              </button>
+              <button
+                class="btn btn-outline-success"
+                type="button"
+                id="signUpBtn"
+                style="margin-right: 20px"
+                onclick="window.location.href='signup.php';"
+              >
+                Sign Up
+              </button>
+              <button
+                class="btn btn-outline-danger"
+                type="button"
+                id="signUpBtn"
+                style="margin-right: 20px"
+                onclick="window.location.href='logout.php';"
+              >
+                Log Out
+              </button>
+              
               <div class="form-check form-switch" style="align-items: right">
                 <input
                   class="form-check-input"
@@ -189,21 +216,15 @@ window.addEventListener('load', function () {
       let template = ` <div class="row">`;
       jsonData.articles.map((d) => {
         if (d.urlToImage !== null) {
-          template += `
-      <div class='col-md-4'>
-        <div class="card news-card">
-          <img src="${d.urlToImage}" class="card-img-top news-card-img" />
-          <div class="card-body">
-            <h5 class="card-title">${
-              d.title ? d.title.slice(0, 45) : ''
-            }...</h5>
-            <p class="card-text">${
-              d.description ? d.description.slice(0, 88) : ''
-            }..</p>
-            <a href="${
-              d.url
-            }" target="_blank" class="btn btn-primary">See Page</a>
-          </div>
+          template += `<div class='col-md-4'>
+          <div class="card" style="width: 90% ;margin: 2px 0 2px 0;" }}>      
+        <img src=${d.urlToImage} class="card-img-top"  />
+        <div class="card-body">
+          <h5 class="card-title">${d.title ? d.title.slice(0, 45) : ''}...</h5>
+          <p class="card-text">
+             ${d.description ? d.description.slice(0, 88) : ''}..
+          </p>
+          <a href=${d.url} target="#" class="btn btn-primary see-page-btn">See Page</a>
         </div>
       </div>`;
         }
@@ -229,4 +250,30 @@ window.addEventListener('load', function () {
         setTheme(LIGHT_THEME);
       }
     });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Add fade-in animation when the page is loaded
+  var welcomeMessage = document.getElementById("welcomeMessage");
+  var headlineMessage = document.getElementById("headlineMessage");
+
+  if (welcomeMessage) {
+      fadeIn(welcomeMessage);
+  }
+
+  if (headlineMessage) {
+      fadeIn(headlineMessage);
+  }
+
+  function fadeIn(element) {
+      var opacity = 0;
+      var interval = setInterval(function() {
+          if (opacity < 1) {
+              opacity += 0.1;
+              element.style.opacity = opacity;
+          } else {
+              clearInterval(interval);
+          }
+      }, 100);
+  }
 });
