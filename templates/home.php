@@ -1,4 +1,9 @@
 <!-- This file give user the top headlines without any filters -->
+<?php
+    session_start();
+    $isSignedIn = isset($_SESSION['name']) && !empty($_SESSION['name']);
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -24,7 +29,13 @@
     <div id="navBarJS"></div>
   </header>
   <div class="container my-3">
-    <p class="text-center fs-1 fw-semibold">Top Headlines</p>
+  <?php
+    if ($isSignedIn) {
+        echo '<h1 id="welcomeMessage" class="display-4 text-center fs-1 fw-semibold">Welcome ' . $_SESSION['name'] . '!</h1>';
+    } else {
+        echo '<p id="headlineMessage" class="text-center fs-1 fw-semibold">Top Headlines</p>';
+    }
+  ?> 
     <div class="text-center">
       <div id="newsID"></div>
 </body>
