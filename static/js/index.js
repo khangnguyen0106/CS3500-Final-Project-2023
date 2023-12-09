@@ -42,7 +42,7 @@ window.addEventListener('load', function () {
   // Setup redirection
   let path = window.location.pathname;
   // API data setup
-  const pgSize = '12';
+  const pgSize = '9';
   const pg = '1';
   let searchBool = false;
   let searchquery = '';
