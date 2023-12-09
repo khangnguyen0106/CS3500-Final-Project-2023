@@ -56,27 +56,75 @@
     }
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-  </head>
-  <body>
-    <div id="form">
-        <h1>Sign Up Form</h1>
-        <form name="form" action="signup.php" method="POST">
-            <label>Enter Username</label>
-            <input type="text" id="user" name="user" required><br><br>
-            <label>Enter Email</label>
-            <input type="email" id="email" name="email" required><br><br>
-            <label>Enter Password</label>
-            <input type="password" id="pass" name="pass" required><br><br>
-            <label>Confirm Password</label>
-            <input type="password" id="cpass" name="cpass" required><br><br>
-            <input type="submit" id="btn" value="SignUp" name="submit"/>
-        </form>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up Page</title>
+  <!-- Link to Bootstrap's CSS first then main.css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+   crossorigin="anonymous" />
+ <link rel="stylesheet"  href="main.css"/>
+  <!-- Link to Bootstrap's JS and then main.js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        #form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="navBarJS"></div>
+    </header>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-sm-8 col-xs-12">
+                <div id="form">
+                    <h1>Sign Up Form</h1>
+                    <form name="form" action="signup.php" method="POST">
+                        <div class="form-group mb-3-custom">
+                            <label for="user">Enter Username</label>
+                            <input type="text" class="form-control" id="user" name="user" required>
+                        </div>
+                        <div class="form-group mb-3-custom">
+                            <label for="email">Enter Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group mb-3-custom">
+                            <label for="pass">Enter Password</label>
+                            <input type="password" class="form-control" id="pass" name="pass" required>
+                        </div>
+                        <div class="form-group mb-3-custom">
+                            <label for="cpass">Confirm Password</label>
+                            <input type="password" class="form-control" id="cpass" name="cpass" required>
+                        </div>
+                        <div class="form-group text-center">
+                            <input type="submit" class="btn btn-primary" id="btn" value="Sign Up" name="submit"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-  </body>
+</body>
 </html>
+
